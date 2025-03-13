@@ -1,0 +1,10 @@
+{
+    "usuario": [
+        {
+            "id": "1",
+            "nome": "Julio",
+            "email": "administrador@safestock.com",
+            "senha": "adm123"
+        }
+    ]
+}

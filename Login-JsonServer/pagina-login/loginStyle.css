@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    height: 50vh;
+    width: 40vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: antiquewhite;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+input {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 350px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+button {
+    display: flex;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+}
