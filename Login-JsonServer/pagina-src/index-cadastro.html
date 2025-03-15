@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
     <main>
@@ -13,10 +13,19 @@
         </header>
 
         <section class="section-form">
-            <form id="form-cadastro">                >
-                <input type="text" id="input_nome" placeholder="nome completo" required> <br>
-                <input type="text" id="input_email" placeholder="email" required> <br>
-                <input type="password" id="input_senha" placeholder="senha" required> <br>
+            <form id="form-cadastro">                
+                <input type="text" id="input_nome" placeholder="Nome Completo"> <br>
+                <!-- <select id="inputCargo">
+                    <option>Cargo</option>
+                    <option value="proprietario">Proprietário</option>
+                    <option value="administracao">Administração</option>
+                    <option value="funcionarioLimpeza">Funcionário Limpeza</option>
+                </select><br> -->
+                <input type="text" id="input_cargo" placeholder="Cargo"><br>
+                <input type="text" id="input_cnpj" placeholder="CNPJ"><br>
+                <input type="text" id="input_telefone" placeholder="Telefone"><br>
+                <input type="text" id="input_email" placeholder="email"> <br>
+                <input type="password" id="input_senha" placeholder="senha"> <br>
                 <button type="submit" id="btnCadastro">Enviar</button> <br>
             </form>
         </section>

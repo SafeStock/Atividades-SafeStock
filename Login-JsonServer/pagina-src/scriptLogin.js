@@ -12,6 +12,7 @@ document.getElementById('form-login').addEventListener('submit', (event) => {
 const logarUsuario = () => {
     const email = inputEmailLogin.value.trim().toLowerCase();
     const senha = inputSenhaLogin.value;
+    validarEmail();
 
     fetch('http://localhost:3000/usuarios')
     .then(response => response.json())
@@ -50,3 +51,14 @@ const formNoneLog = () => {
     inputEmailLogin.value = '';
     inputSenhaLogin.value = '';
 };
+
+const validarEmail = () =>{
+    console.log('entrou na função')
+    const regex = /@/;
+    if(inputEmailLogin.value.regex){
+        resultado.innerHTML = `email válido`;
+        console.log("email inválido")
+    }else{
+        resultado.innerHTML = `email inválido`
+    }
+}
