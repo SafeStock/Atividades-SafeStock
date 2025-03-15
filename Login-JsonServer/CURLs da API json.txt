@@ -1,0 +1,112 @@
+Para importar no Insominia:
+
+
+GET cachorros
+
+curl --request GET \
+  --url http://localhost:3000/cachorros
+
+ 
+GET cachorros/{id}  
+
+curl --request GET \
+  --url http://localhost:3000/cachorros/101
+  
+  
+GET cachorros?nome=X (podemos usar qualquer campo para filtrar e pode trazer mais de 1, sem problemas)
+
+curl --request GET \
+  --url http://localhost:3000/cachorros?nome=Chaveirinho
+
+
+DELETE cachorros/{id}  
+
+curl --request DELETE \
+  --url http://localhost:3000/cachorros/101
+  
+
+POST cachorros  
+
+ curl --request POST \
+  --url http://localhost:3000/cachorros \
+  --header 'Content-Type: application/json' \
+  --data '{
+		"nome": "Chaveirinho",
+		"raca": {
+			"id": 2,
+			"nome": "Beagle"
+		},
+		"peso": 7.5,
+		"preco": 2300,
+		"nascimento": "2022-01-05",
+		"foto": "https://raw.githubusercontent.com/jigsawpieces/dog-api-images/refs/heads/main/beagle/n02088364_13028.jpg"
+	}' 
+
+  
+
+PUT cachorros  
+
+ curl --request PUT \
+  --url http://localhost:3000/cachorros/105 \
+  --header 'Content-Type: application/json' \
+  --data '{
+		"nome": "Manhoso",
+		"raca": {
+			"id": 2,
+			"nome": "Beagle"
+		},
+		"peso": 7.5,
+		"preco": 2100,
+		"nascimento": "2022-01-05",
+		"foto": "https://raw.githubusercontent.com/jigsawpieces/dog-api-images/refs/heads/main/beagle/n02088364_13028.jpg"
+	}' 
+
+
+
+
+
+
+
+GET racas
+
+curl --request GET \
+  --url http://localhost:3000/racas
+
+ 
+GET racas/{id}  
+
+curl --request GET \
+  --url http://localhost:3000/racas/101
+  
+  
+GET racas?nome=X (podemos usar qualquer campo para filtrar e pode trazer mais de 1, sem problemas)
+
+curl --request GET \
+  --url http://localhost:3000/racas?nome=Lulu
+
+
+DELETE racas/{id}  
+
+curl --request DELETE \
+  --url http://localhost:3000/racas/1
+  
+
+POST racas  
+
+ curl --request POST \
+  --url http://localhost:3000/racas \
+  --header 'Content-Type: application/json' \
+  --data '{
+			"nome": "Poodle"
+		}' 
+
+  
+
+PUT racas
+
+ curl --request PUT \
+  --url http://localhost:3000/racas/4 \
+  --header 'Content-Type: application/json' \
+  --data '{
+			"nome": "Poodle branco"
+		}' 

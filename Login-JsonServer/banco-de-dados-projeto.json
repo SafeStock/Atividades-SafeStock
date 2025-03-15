@@ -1,0 +1,22 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Julio",
+      "email": "administrador@safestock.com",
+      "senha": "adm123"
+    },
+    {
+      "id": "95a6",
+      "nome": "Granja Feliz",
+      "email": "gui@gmail.com",
+      "senha": "123"
+    },
+    {
+      "id": "b4f3",
+      "nome": "Guilherme Brito",
+      "email": "gui@gmail.com",
+      "senha": "1234"
+    }
+  ]
+}
