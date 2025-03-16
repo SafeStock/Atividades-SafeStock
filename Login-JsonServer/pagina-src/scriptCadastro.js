@@ -4,17 +4,81 @@ const inputCnpj = document.querySelector("#input_cnpj");
 const inputTelefone = document.querySelector("#input_telefone");
 const inputEmailCadastro = document.querySelector('#input_email');
 const inputSenhaCadastro = document.querySelector('#input_senha');
+const buttonProximo = document.querySelector('#btnProximo');
 const buttonCadastro = document.querySelector('#btnCadastro');
 const resultado = document.querySelector('#div-resultado');
 
-document.getElementById('form-cadastro').addEventListener('submit', (event) => {
+buttonProximo.addEventListener('click', (event) => {
     event.preventDefault();
-    if (validarCadastro()) {
-        setTimeout(() => { // forçando um delay para simular uma requisição demorada
-            postUsuario();
-        }, 2000);
+
+    if (validarPrimeiraEtapa()) {
+        inputNomeCadastro.style.display = 'none';
+        inputCargo.style.display = 'none';
+        inputCnpj.style.display = 'none';
+
+        inputTelefone.style.display = 'block';
+        inputEmailCadastro.style.display = 'block';
+        inputSenhaCadastro.style.display = 'block';
+
+        buttonProximo.style.display = 'none';
+        buttonCadastro.style.display = 'block';
     }
 });
+
+buttonCadastro.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    if (validarSegundaEtapa()) {
+        postUsuario();
+    }
+});
+
+const validarPrimeiraEtapa = () => {
+    if (!inputNomeCadastro.value.trim()) {
+        mensagemStatus('Nome é obrigatório', 'erro');
+        return false;
+    }
+
+    if (!inputCargo.value.trim()) {
+        mensagemStatus('Cargo é obrigatório', 'erro');
+        return false;
+    }
+
+    if(inputCargo.value.toLowerCase() !== "dono" && inputCargo.value.toLowerCase() !== "administração" && inputCargo.value.toLowerCase() !== "funcionario da limpeza") {
+        mensagemStatus('Cargo Inválido', 'erro');
+        return false;
+    }
+
+    const cnpjLimpo = inputCnpj.value.replace(/\D/g, '');
+    if (!cnpjLimpo || cnpjLimpo.length !== 14) {
+        mensagemStatus('CNPJ deve conter exatamente 14 números', 'erro');
+        return false;
+    }
+
+    return true;
+};
+
+const validarSegundaEtapa = () => {
+    const telefoneLimpo = inputTelefone.value.replace(/\D/g, '');
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!telefoneLimpo || telefoneLimpo.length !== 11) {
+        mensagemStatus('O telefone deve conter exatamente 11 números', 'erro');
+        return false;
+    }
+
+    if (!regexEmail.test(inputEmailCadastro.value.trim())) {
+        mensagemStatus('Email inválido', 'erro');
+        return false;
+    }
+
+    if (!inputSenhaCadastro.value.trim()) {
+        mensagemStatus('Senha é obrigatória', 'erro');
+        return false;
+    }
+
+    return true;
+};
 
 const postUsuario = () => {
     const novoUsuario = {
@@ -66,59 +130,3 @@ const formNoneCad = () => {
 const trocarPagina = () => {
     window.location = "index-login.html";
 };
-
-const validarCadastro = () => {
-    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    // Remover espaços em branco e caracteres não numéricos
-    const cnpjLimpo = inputCnpj.value.replace(/\D/g, '');
-    const telefoneLimpo = inputTelefone.value.replace(/\D/g, '');
-
-    if (!inputNomeCadastro.value.trim()) {
-        mensagemStatus('Nome é obrigatório', 'erro');
-        return false;
-    }
-
-    if (!inputCargo.value.trim()) {
-        mensagemStatus('Cargo é obrigatório', 'erro');
-        return false;
-    }
-
-    if(inputCargo.value.toLowerCase() != "dono" && inputCargo.value.toLowerCase() != "administração" && inputCargo.value.toLowerCase() != "funcionario da limpeza"){
-        mensagemStatus('Cargo Inválido', 'erro');
-        return false
-    }
-
-    if (!cnpjLimpo) {
-        mensagemStatus('CNPJ é obrigatório', 'erro');
-        return false;
-    }
-
-    if (cnpjLimpo.length !== 14) {
-        mensagemStatus('CNPJ deve conter exatamente 14 números', 'erro');
-        return false;
-    }
-
-    if (!telefoneLimpo) {
-        mensagemStatus('Telefone é obrigatório', 'erro');
-        return false;
-    }
-
-    if (telefoneLimpo.length !== 11) {
-        mensagemStatus('O telefone deve conter exatamente 11 números', 'erro');
-        return false;
-    }
-
-    if (!regexEmail.test(inputEmailCadastro.value.trim())) {
-        mensagemStatus('Email inválido', 'erro');
-        return false;
-    }
-
-    if (!inputSenhaCadastro.value.trim()) {
-        mensagemStatus('Senha é obrigatória', 'erro');
-        return false;
-    }
-
-    return true;
-};
-
