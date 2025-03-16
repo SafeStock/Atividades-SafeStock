@@ -6,6 +6,7 @@
     <title>Cadastro</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <main>
@@ -16,8 +17,17 @@
         <section class="section-form-cadastro">
             <form id="form-cadastro">                
                 <input type="text" id="input_nome" placeholder="Nome completo" required> <br>
-                <input type="text" id="input_email" placeholder="Email" required> <br>
-                <input type="password" id="input_senha" placeholder="Senha" required> <br>
+                <!-- <select id="inputCargo">
+                    <option>Cargo</option>
+                    <option value="proprietario">Proprietário</option>
+                    <option value="administracao">Administração</option>
+                    <option value="funcionarioLimpeza">Funcionário Limpeza</option>
+                </select><br> -->
+                <input type="text" id="input_cargo" placeholder="Cargo"><br>
+                <input type="text" id="input_cnpj" placeholder="CNPJ"><br>
+                <input type="text" id="input_telefone" placeholder="Telefone"><br>
+                <input type="text" id="input_email" placeholder="email"> <br>
+                <input type="password" id="input_senha" placeholder="senha"> <br>
                 <button type="submit" id="btnCadastro">Enviar</button> <br>
             </form>
         </section>
