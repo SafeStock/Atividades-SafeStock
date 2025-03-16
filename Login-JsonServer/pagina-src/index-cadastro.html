@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <main>
@@ -12,9 +14,9 @@
                 <h1>Cadastre-se</h1>
         </header>
 
-        <section class="section-form">
+        <section class="section-form-cadastro">
             <form id="form-cadastro">                
-                <input type="text" id="input_nome" placeholder="Nome Completo"> <br>
+                <input type="text" id="input_nome" placeholder="Nome completo" required> <br>
                 <!-- <select id="inputCargo">
                     <option>Cargo</option>
                     <option value="proprietario">Proprietário</option>
@@ -30,9 +32,15 @@
             </form>
         </section>
 
+        <p>Já tem um cadastro?<button class="Redirecionar" id="Redirecionar2">Entre</button></p>
+
         <div id="div-resultado"></div>
 
     </main>
+
+    <section class="areaImagemCadastro">
+        <img src="./imagens/imagemCadastro.svg">
+    </section>
     <script src="scriptCadastro.js" defer></script>
 </body>
 </html>
