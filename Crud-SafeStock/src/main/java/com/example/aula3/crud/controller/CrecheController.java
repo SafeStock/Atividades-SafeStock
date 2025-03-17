@@ -31,6 +31,7 @@ public class CrecheController {
     public Creche adicionarCreche(@RequestBody Creche creche){
         return crecheRepository.save(creche);
     }
+
     @DeleteMapping("/{id}")
     public String removerCreche(@PathVariable Long id){
         crecheRepository.deleteById(id);
