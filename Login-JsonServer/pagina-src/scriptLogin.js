@@ -1,6 +1,6 @@
 const inputEmailLogin = document.querySelector('#input_emailLogin');
 const inputSenhaLogin = document.querySelector('#input_senhaLogin');
-const buttonLogin = document.querySelector('#btnLogin');
+const buttonProximo = document.querySelector('#btnProximo');
 
 const resultado = document.querySelector('#div-resultado');
 
@@ -62,3 +62,4 @@ const validarEmail = () =>{
         resultado.innerHTML = `email inválido`
     }
 }
+

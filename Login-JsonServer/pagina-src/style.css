@@ -15,7 +15,11 @@ body{
 
 h1{
     color: #3A577B;
+    font-size: 38px;
     font-family: 'Montserrat Alternates', sans-serif;
+    /* margin-left: -10.4rem; */
+    margin: 2rem;
+    margin-top: 3rem;
     
 }
 
@@ -32,15 +36,15 @@ main{
     box-shadow: 0px 0px 10px 0px #7c7c7c;
     transition: 0.8s;
 
-    &:hover{
+    /* &:hover{
         transition: 0.4s;
         transform: scale(1.03);
         box-shadow: 0px 0px 7.5px 0px #a8a8a8;
-    }
+    } */
 }
 
 .main-Login{
-    height: 50vh;
+    height: 60vh;
     width: 35vw;
     display: flex;
 }
@@ -48,7 +52,7 @@ main{
 
 .section-form-cadastro{
     width: 100%;
-    height: 42.5vh;
+    height: 37.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,13 +78,14 @@ form{
 input {
     display: flex;
     margin-top: 10px;
-    margin-bottom: 10px;
-    width: 22vw;
-    height: 5vh;
-    border-radius: 20px;
-    border: 0.5px solid #3A577B;
-    box-shadow: 0px 2px 5px 0.5px #7b7b7b;
+    /* margin-bottom: 10px; */
+    width: 350px;
+    height: 45px;
+    border-radius: 50px;
+    border: 0.5px solid #ffffff;
+    box-shadow: 0px 1px 4px 0.1px #7b7b7b;
     transition: 0.4s;
+    padding: 10px;
 }
 
 input::placeholder{
@@ -125,20 +130,22 @@ button {
 
 .areaImagemCadastro{
     width: 40vw;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: -5rem;
+    gap: 5rem;
 }
 
 img{
     width: 60vw;
-    height: 60vh;
+    height: 60vh;  
 }
 
 p{
     color: #3A577B;
-    font-size: 15px;
+    font-size: 17px;
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -170,6 +177,11 @@ p{
     
 }
 
-.InputNoneapos{
-    display: flex;
+.mainDesabilitada{
+    display: none;
+}
+
+#div-resultado{
+    margin-top: 5px;
+    color: #ff0f0f;
 }
