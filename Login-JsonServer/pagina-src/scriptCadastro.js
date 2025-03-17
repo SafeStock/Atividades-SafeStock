@@ -7,22 +7,17 @@ const inputSenhaCadastro = document.querySelector('#input_senha');
 const buttonProximo = document.querySelector('#btnProximo');
 const buttonCadastro = document.querySelector('#btnCadastro');
 const resultado = document.querySelector('#div-resultado');
+const mainHabilitada = document.querySelector('#mainHabilitada');
+const mainDesabilitada = document.querySelector('#mainDesabilitada')
 
 buttonProximo.addEventListener('click', (event) => {
     event.preventDefault();
 
     if (validarPrimeiraEtapa()) {
-        inputNomeCadastro.style.display = 'none';
-        inputCargo.style.display = 'none';
-        inputCnpj.style.display = 'none';
-
-        inputTelefone.style.display = 'block';
-        inputEmailCadastro.style.display = 'block';
-        inputSenhaCadastro.style.display = 'block';
-
-        buttonProximo.style.display = 'none';
-        buttonCadastro.style.display = 'block';
+        mainDesabilitada.style.display = 'flex';
+        mainHabilitada.style.display = 'none';
     }
+
 });
 
 buttonCadastro.addEventListener('click', (event) => {
