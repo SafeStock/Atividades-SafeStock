@@ -5,6 +5,7 @@ const inputTelefone = document.querySelector("#input_telefone");
 const inputEmailCadastro = document.querySelector('#input_email');
 const inputSenhaCadastro = document.querySelector('#input_senha');
 const buttonCadastro = document.querySelector('#btnCadastro');
+const buttonProximo = document.querySelector('#btnProximo')
 const resultado = document.querySelector('#div-resultado');
 
 document.getElementById('form-cadastro').addEventListener('submit', (event) => {
@@ -14,6 +15,13 @@ document.getElementById('form-cadastro').addEventListener('submit', (event) => {
             postUsuario();
         }, 2000);
     }
+
+    document.getElementById("#btnCadastro").addEventListener("click", function() {
+        document.getElementById("input_cargo").classList.add("InputNoneApos"); // Torna visível
+        document.getElementById("input_cnpj").classList.add("InputNoneApos"); // Torna visível
+        document.getElementById("input_telefone").classList.add("InputNoneApos"); // Torna visível
+        document.getElementById("btnCadastroNoneInicial").classList.add("btnCadastro"); // Torna visível
+    });
 });
 
 const postUsuario = () => {
@@ -120,5 +128,6 @@ const validarCadastro = () => {
     }
 
     return true;
+    
 };
 

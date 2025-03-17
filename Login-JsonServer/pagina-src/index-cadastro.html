@@ -16,19 +16,20 @@
 
         <section class="section-form-cadastro">
             <form id="form-cadastro">                
-                <input type="text" id="input_nome" placeholder="Nome completo" required> <br>
+                <input type="text" id="input_nome" placeholder="Nome completo" required class="InputNoneApos"> <br>
                 <!-- <select id="inputCargo">
                     <option>Cargo</option>
                     <option value="proprietario">Proprietário</option>
                     <option value="administracao">Administração</option>
                     <option value="funcionarioLimpeza">Funcionário Limpeza</option>
                 </select><br> -->
-                <input type="text" id="input_cargo" placeholder="Cargo"><br>
-                <input type="text" id="input_cnpj" placeholder="CNPJ"><br>
-                <input type="text" id="input_telefone" placeholder="Telefone"><br>
-                <input type="text" id="input_email" placeholder="email"> <br>
-                <input type="password" id="input_senha" placeholder="senha"> <br>
-                <button type="submit" id="btnCadastro">Enviar</button> <br>
+                <input type="text" id="input_email" placeholder="email" class="InputNoneApos"> <br>
+                <input type="password" id="input_senha" placeholder="senha" class="InputNoneApos"><br>
+                <input type="text" id="input_cargo" placeholder="Cargo" class="InputNoneInicial" style="display: none;"><br>
+                <input type="text" id="input_cnpj" placeholder="CNPJ" class="InputNoneInicial" style="display: none;"><br>
+                <input type="text" id="input_telefone" placeholder="Telefone" class="InputNoneInicial" style="display: none;"><br>
+                <button type="submit" id="btnProximo">Proximo</button><br>
+                <button type="submit" id="btnCadastro" style="display: none;">Enviar</button><br>
             </form>
         </section>
 
@@ -44,3 +45,10 @@
     <script src="scriptCadastro.js" defer></script>
 </body>
 </html>
+
+<script>
+    function botao1(){
+        
+
+    }
+</script>
