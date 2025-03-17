@@ -44,6 +44,51 @@
       "telefone": "11970298460",
       "email": "rayane@hty.gg",
       "senha": "123"
+    },
+    {
+      "id": "d680",
+      "nome": "guilherme brito",
+      "cargo": "administração",
+      "cnpj": "11111111111111",
+      "telefone": "11111111111",
+      "email": "gui@gmail.com",
+      "senha": "111111"
+    },
+    {
+      "id": "5cdb",
+      "nome": "guilherme brito",
+      "cargo": "administração",
+      "cnpj": "11111111111111",
+      "telefone": "11111111111",
+      "email": "gui@gmail.com",
+      "senha": "1"
+    },
+    {
+      "id": "89ba",
+      "nome": "granja feliz",
+      "cargo": "administração",
+      "cnpj": "11111111111111",
+      "telefone": "11111111111",
+      "email": "kamile@gmail.com",
+      "senha": "1"
+    },
+    {
+      "id": "8794",
+      "nome": "produtivatech",
+      "cargo": "administração",
+      "cnpj": "11111111111111",
+      "telefone": "11111111111",
+      "email": "sophia@gmail.com",
+      "senha": "1"
+    },
+    {
+      "id": "252b",
+      "nome": "granja feliz",
+      "cargo": "administração",
+      "cnpj": "11111111111111",
+      "telefone": "11111111111",
+      "email": "aaa@hotmail.com",
+      "senha": "1"
     }
   ]
 }

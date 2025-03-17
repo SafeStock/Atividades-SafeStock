@@ -7,6 +7,7 @@ const inputSenhaCadastro = document.querySelector('#input_senha');
 const buttonProximo = document.querySelector('#btnProximo');
 const buttonCadastro = document.querySelector('#btnCadastro');
 const resultado = document.querySelector('#div-resultado');
+const resultado2 = document.querySelector('#div-resultado-2');
 const mainHabilitada = document.querySelector('#mainHabilitada');
 const mainDesabilitada = document.querySelector('#mainDesabilitada')
 
@@ -19,12 +20,15 @@ buttonProximo.addEventListener('click', (event) => {
     }
 
 });
-
+console.log(buttonCadastro);
 buttonCadastro.addEventListener('click', (event) => {
     event.preventDefault();
 
     if (validarSegundaEtapa()) {
+         console.log("Validação OK, chamando postUsuario()...");
         postUsuario();
+    } else {
+        console.log("Validação falhou!");
     }
 });
 
@@ -58,17 +62,17 @@ const validarSegundaEtapa = () => {
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!telefoneLimpo || telefoneLimpo.length !== 11) {
-        mensagemStatus('O telefone deve conter exatamente 11 números', 'erro');
+        mensagemStatuss('O telefone deve conter exatamente 11 números', 'erro');
         return false;
     }
 
     if (!regexEmail.test(inputEmailCadastro.value.trim())) {
-        mensagemStatus('Email inválido', 'erro');
+        mensagemStatuss('Email inválido', 'erro');
         return false;
     }
 
     if (!inputSenhaCadastro.value.trim()) {
-        mensagemStatus('Senha é obrigatória', 'erro');
+        mensagemStatuss('Senha é obrigatória', 'erro');
         return false;
     }
 
@@ -97,13 +101,15 @@ const postUsuario = () => {
         return response.json();
     })
     .then(() => {
-        mensagemStatus('Cadastro realizado com sucesso!', 'sucesso');
-        formNoneCad();
-        trocarPagina();
+        mensagemStatuss('Cadastro realizado com sucesso!', 'sucesso');
+        setTimeout(() => {
+            formNoneCad();
+            trocarPagina();
+        }, 3000);
     })
     .catch(error => {
         console.error(error);
-        mensagemStatus('Erro ao cadastrar usuário', 'erro');
+        mensagemStatuss('Erro ao cadastrar usuário', 'erro');
     });
 };
 
@@ -111,6 +117,12 @@ const mensagemStatus = (texto, tipo) => {
     resultado.textContent = texto;
     resultado.className = tipo;
     setTimeout(() => resultado.textContent = '', 3000);
+};
+
+const mensagemStatuss = (texto, tipo) => {
+    resultado2.textContent = texto;
+    resultado2.className = tipo;
+    setTimeout(() => resultado2.textContent = '', 3000);
 };
 
 const formNoneCad = () => {

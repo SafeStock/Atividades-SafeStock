@@ -1,112 +1,58 @@
+npx json-server banco-de-dados-projeto.json
+
 Para importar no Insominia:
 
 
-GET cachorros
+GET usuarios
 
 curl --request GET \
-  --url http://localhost:3000/cachorros
+  --url http://localhost:3000/usuarios
 
  
-GET cachorros/{id}  
+GET usuarios/{id}  
 
 curl --request GET \
-  --url http://localhost:3000/cachorros/101
+  --url http://localhost:3000/usuarios/1
   
   
-GET cachorros?nome=X (podemos usar qualquer campo para filtrar e pode trazer mais de 1, sem problemas)
+GET usuarios?nome=X (podemos usar qualquer campo para filtrar e pode trazer mais de 1, sem problemas)
 
 curl --request GET \
-  --url http://localhost:3000/cachorros?nome=Chaveirinho
+  --url http://localhost:3000/usuarios?email=emaildobanco
 
 
-DELETE cachorros/{id}  
+DELETE usuarios/{id}  
 
 curl --request DELETE \
-  --url http://localhost:3000/cachorros/101
+  --url http://localhost:3000/usuarios/1
   
 
-POST cachorros  
+POST usuarios  
 
  curl --request POST \
-  --url http://localhost:3000/cachorros \
+  --url http://localhost:3000/usuarios \
   --header 'Content-Type: application/json' \
   --data '{
-		"nome": "Chaveirinho",
-		"raca": {
-			"id": 2,
-			"nome": "Beagle"
-		},
-		"peso": 7.5,
-		"preco": 2300,
-		"nascimento": "2022-01-05",
-		"foto": "https://raw.githubusercontent.com/jigsawpieces/dog-api-images/refs/heads/main/beagle/n02088364_13028.jpg"
+	  "nome": "",
+      "cargo": "",
+      "cnpj": "",
+      "telefone": "",
+      "email": "",
+      "senha": ""
 	}' 
 
   
 
-PUT cachorros  
+PUT usuarios  
 
  curl --request PUT \
-  --url http://localhost:3000/cachorros/105 \
+  --url http://localhost:3000/usuarios/1 \
   --header 'Content-Type: application/json' \
   --data '{
-		"nome": "Manhoso",
-		"raca": {
-			"id": 2,
-			"nome": "Beagle"
-		},
-		"peso": 7.5,
-		"preco": 2100,
-		"nascimento": "2022-01-05",
-		"foto": "https://raw.githubusercontent.com/jigsawpieces/dog-api-images/refs/heads/main/beagle/n02088364_13028.jpg"
+	  "nome": "",
+      "cargo": "",
+      "cnpj": "",
+      "telefone": "",
+      "email": "",
+      "senha": ""
 	}' 
-
-
-
-
-
-
-
-GET racas
-
-curl --request GET \
-  --url http://localhost:3000/racas
-
- 
-GET racas/{id}  
-
-curl --request GET \
-  --url http://localhost:3000/racas/101
-  
-  
-GET racas?nome=X (podemos usar qualquer campo para filtrar e pode trazer mais de 1, sem problemas)
-
-curl --request GET \
-  --url http://localhost:3000/racas?nome=Lulu
-
-
-DELETE racas/{id}  
-
-curl --request DELETE \
-  --url http://localhost:3000/racas/1
-  
-
-POST racas  
-
- curl --request POST \
-  --url http://localhost:3000/racas \
-  --header 'Content-Type: application/json' \
-  --data '{
-			"nome": "Poodle"
-		}' 
-
-  
-
-PUT racas
-
- curl --request PUT \
-  --url http://localhost:3000/racas/4 \
-  --header 'Content-Type: application/json' \
-  --data '{
-			"nome": "Poodle branco"
-		}' 
