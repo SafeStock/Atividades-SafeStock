@@ -1,7 +1,8 @@
 // import { useState } from 'react'
 
-import NavBar from "./layouts/LayoutSite.jsx";
-import FooterSite from "./layouts/LayoutFooterSite.jsx"
+import NavBar from "./layouts/NavBar.jsx";
+import {FooterSite} from "./layouts/Footer.jsx"
+import BtnSubir from "./components/BtnSubir.jsx";
 
 
 
@@ -9,11 +10,9 @@ function App() {
 
   return (
     <>
-      <NavBar />
-      <div className="text-3xl text-green-500 p-8">
-        Tailwind funcionando! 🎉
-      </div>
-      <FooterSite />
+      <NavBar/>
+      <BtnSubir/>
+      <FooterSite/>
     </>
   )
 }

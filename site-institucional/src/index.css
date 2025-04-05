@@ -5,7 +5,6 @@
   
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: #ffffff;
 
   font-synthesis: none;
@@ -13,3 +12,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
