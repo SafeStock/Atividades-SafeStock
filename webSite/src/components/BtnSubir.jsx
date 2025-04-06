@@ -34,8 +34,8 @@ export default function BtnSubir() {
                     onClick={subirTela}
                     role="button"
                     tabIndex={0}
-                    className="fixed bottom-[25%] right-[2.5%] bg-blue-600  text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 z-50 cursor-pointer"
-                ><SquareChevronUp className="w-[6vh] h-[6vh] hover:scale-110 transform" color="#fff" />
+                    className="fixed bottom-[25%] right-[2.5%]  text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 z-50 cursor-pointer"
+                ><SquareChevronUp className="w-[6vh] h-[6vh] hover:scale-110 transform " color="#5390e7" />
                 </span>
             )}
         </>

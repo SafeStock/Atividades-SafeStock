@@ -64,7 +64,24 @@
           { "name": "HistoricoAlertas_idHistoricoAlertas", "type": "INT", "foreignKey": { "references": "HistoricoAlertas(idHistoricoAlertas)" } },
           { "name": "Produto_idProduto", "type": "INT", "foreignKey": { "references": "Produto(idProduto)" } }
         ]
+      },
+      {
+        "name": "RelacionamentosEmMerMaid",
+        "columns": [
+          { "name": "Creche ||--o{ Funcionario : possui" },
+          { "name": "Creche ||--o{ Produto : possui" },
+          { "name": "Produto ||--o{ Relatorio : está_em" },
+          { "name": "Funcionario ||--o{ RegistroUso : faz" } ,
+          { "name": "RegistroUso ||--o{ Relatorio : gera" },
+          { "name": "HistoricoAlertas ||--o{ Relatorio : associado_a" } 
+        ]
       }
     ]
   }
+  
+  
+  
+  
+  
+  
   
