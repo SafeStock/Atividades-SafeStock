@@ -19,7 +19,7 @@ export function Home() {
             </div>
 
             <div className="flex justify-center items-center h-full">
-                <img src={alunos} alt="alunos" className="max-h-[100%] left-[10%] relative  " />
+                <img src={alunos} alt="alunos" className="max-h-[100%] left-[15%] relative  " />
             </div>
 
         </section>
