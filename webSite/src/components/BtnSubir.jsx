@@ -1,7 +1,7 @@
 import { SquareChevronUp } from "lucide-react";
 import { useEffect, useState } from 'react';
 
-export default function BtnSubir() {
+export function BtnSubir() {
 
     //Estado de Visibilidade - 'False' esconde o botão
     const [visibilidade, setVisibilidade] = useState(false);
