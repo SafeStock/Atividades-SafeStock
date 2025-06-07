@@ -27,7 +27,7 @@ export function NavBar() {
                             key={item}
                             onClick={() => funcaoScroll(item)}
                             className={`cursor-pointer transition-all duration-300 ease-in-out ${active === item
-                                    ? "!font-[550] text-[#74B1E7]"
+                                    ? "font-[550] text-[#74B1E7]"
                                     : "font-normal"
                                 }`}
                         >
