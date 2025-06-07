@@ -14,5 +14,4 @@ export function PorQueSafeStock() {
          </div>
         </section>
      )
- 
 }
